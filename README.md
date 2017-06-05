@@ -4,11 +4,13 @@
 
 ## 使用方法
 ```
+[![NPM](https://nodei.co/npm/vue-drag-2.0.png)](https://nodei.co/npm/vue-drag-2.0/)
+github: <https://github.com/ppya0812/vue-drag-2.0>
 
-NPM
+### NPM安装
   npm install vue-drag-2.0
 
-页面调用
+### 页面调用
   import Vue from 'vue'
   import vueDrag from 'vue-drag-2.0'
 
