@@ -3,18 +3,20 @@
 
 
 ## 使用方法
+```
 
-##NPM
+## NPM
   npm install vue-drag-2.0
 
-##页面调用
+## 页面调用
   import Vue from 'vue'
   import vueDrag from 'vue-drag-2.0'
 
   Vue.use(vueDrag)
-
+```
 
 ## 例子
+```
 new Vue({
   el: 'body',
   data: {
@@ -29,3 +31,4 @@ new Vue({
 <ul v-sortable="{ onUpdate: onUpdate }">
     <li v-for="item in list">{{ item }}</li>
  </ul>
+```
