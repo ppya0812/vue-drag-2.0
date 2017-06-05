@@ -2,6 +2,7 @@
   适用于vue2.0
 
 [![NPM](https://nodei.co/npm/vue-drag-2.0.png)](https://nodei.co/npm/vue-drag-2.0/)
+
 github: <https://github.com/ppya0812/vue-drag-2.0>
 
 ## 使用方法
