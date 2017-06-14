@@ -1,6 +1,6 @@
 {
   "name": "vue-drag-2.0",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "vue drag sort vue2.0",
   "main": "vueDrag.js",
   "scripts": {

@@ -8,40 +8,81 @@ github: <https://github.com/ppya0812/vue-drag-2.0>
 ## 使用方法
   #### NPM安装
     npm install vue-drag-2.0
+		
 
   #### 页面调用
-    import Vue from 'vue'
-    import vueDrag from 'vue-drag-2.0'
-
-  Vue.use(vueDrag)
-
-## 例子
 ```
+<template>
+	<div v-sortable="{onUpdate: onUpdate, preventOnFilter: false}" class="drag-list">
+		<div v-for="v in list" :key="v" class="drag-item">
+		</div>
+	</div>
+</template>
 <script>
 import Vue from 'vue'
-import Drag from '@/wm-kit/packages/drag/src/Drag'
+import Drag from '@/wm-kit/packages/drag/src/vueDrag'
 
 Vue.use(Drag)
-new Vue({
-  el: '',
-  data: {
-    list: ['Foo', 'Bar', 'Baz']
+export default {
+	data() {
+		return {
+	    list: ['Foo', 'Bar', 'Baz']
+		}
   },
   methods: {
     onUpdate: function (event) {
       this.list.splice(event.newIndex, 0, this.list.splice(event.oldIndex, 1)[0])
     }
-  },
-	render() {
-		return (
-			<ul v-sortable="{ onUpdate: this.onUpdate }">
-					<li v-for="v in this.list">v</li>
-			</ul>
-		)
-	}
-})
+  }
+}
 </script>
 ```
+
+## 使用示例
+<template>
+	<div v-sortable="{onUpdate: onUpdate, preventOnFilter: false}" class="drag-list">
+		<div v-for="v in list" :key="v" class="drag-item">
+			{{v}}
+		</div>
+	</div>
+</template>
+
+<script>
+import Vue from 'vue'
+import Drag from '@/wm-kit/packages/drag/src/vueDrag'
+
+Vue.use(Drag)
+export default {
+	data() {
+		return {
+	    list: ['Foo', 'Bar', 'Baz']
+		}
+  },
+  methods: {
+    onUpdate: function (event) {
+      this.list.splice(event.newIndex, 0, this.list.splice(event.oldIndex, 1)[0])
+    }
+  }
+}
+
+</script>
+
+<style>
+	.drag-list {
+		border: 1px solid #f6f6f6;
+		width: 50%;
+	}
+	.drag-item {
+		border-top: 1px solid #f6f6f6;
+		height: 30px;
+		line-height: 30px;
+		background: #ccc;
+	}
+	.sortable-chosen {
+		background: #f5f5f5;
+	}
+
+</style>
 
 ### API 属性介绍 Attributes:
 name            |           type |  default   |                        description
