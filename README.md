@@ -1,13 +1,13 @@
-# Vue-drag-2.0
+# Vue-dragable
   适用于vue2.0
 
 [![NPM](https://nodei.co/npm/vue-drag-2.0.png)](https://nodei.co/npm/vue-drag-2.0/)
 
-github: <https://github.com/ppya0812/vue-drag-2.0>
+github: <https://github.com/ppya0812/vue-dragable>
 
 ## 使用方法
   #### NPM安装
-    npm install vue-drag-2.0
+    npm install vue-drag
 		
 
   #### 页面调用
@@ -39,6 +39,7 @@ export default {
 ```
 
 ## 使用示例
+```
 <template>
 	<div v-sortable="{onUpdate: onUpdate, preventOnFilter: false}" class="drag-list">
 		<div v-for="v in list" :key="v" class="drag-item">
@@ -83,6 +84,7 @@ export default {
 	}
 
 </style>
+```
 
 ### API 属性介绍 Attributes:
 name            |           type |  default   |                        description
