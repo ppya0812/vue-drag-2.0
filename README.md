@@ -116,11 +116,9 @@ scrollSpeed     |  String|  10| // px
 
 #### 函数api
 #### 1.setData
-```html
 	function (/** DataTransfer */dataTransfer, /** HTMLElement*/dragEl) {
 		dataTransfer.setData('Text', dragEl.textContent); // `dataTransfer` object of HTML5 DragEvent
 	}
-```
 #### 2. onChoose:
 	function (/**Event*/evt) {
 		evt.oldIndex;  // element index within parent
