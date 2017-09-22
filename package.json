@@ -1,6 +1,6 @@
 {
-  "name": "vue-dragable",
-  "version": "1.0.0",
+  "name": "vue-drag-2.0",
+  "version": "1.2.0",
   "description": "vue drag sort vue2.0",
   "main": "vueDrag.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
    "repository": {
     "type": "git",
-    "url": "git+https://github.com/ppya0812/vue-dragable"
+    "url": "git+https://github.com/ppya0812/vue-drag-2.0"
   },
   "keywords": [
     "vue",
