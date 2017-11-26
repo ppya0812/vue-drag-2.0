@@ -588,10 +588,13 @@
 					dx = (touch.clientX - tapEvt.clientX) + fallbackOffset.x,
 					dy = (touch.clientY - tapEvt.clientY) + fallbackOffset.y,
 					translate3d = evt.touches ? 'translate3d(' + dx + 'px,' + dy + 'px,0)' : 'translate(' + dx + 'px,' + dy + 'px)';
-					
+
 				// clearInterval
 				if (touch.clientY < 0) {
 					clearInterval(autoScroll.pid)
+					// Remove class's
+					_toggleClass(dragEl, this.options.ghostClass, false);
+					_toggleClass(dragEl, this.options.chosenClass, false);
 				}
 				// only set the status to dragging, when we are actually dragging
 				if (!Sortable.active) {
@@ -647,6 +650,8 @@
 				ghostRect = ghostEl.getBoundingClientRect();
 				_css(ghostEl, 'width', rect.width * 2 - ghostRect.width);
 				_css(ghostEl, 'height', rect.height * 2 - ghostRect.height);
+			} else {
+				_toggleClass(dragEl, this.options.chosenClass, true)
 			}
 		},
 
